@@ -1,0 +1,23 @@
+{
+  "name": "okx-ai-trader",
+  "version": "0.1.0",
+  "description": "Monitor OKX perpetual swaps, feed daily volume/trend indicators to an AI for trade decisions, gate them through deterministic risk guardrails, and execute on demo/live.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "monitor": "node server/scripts/monitor.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "https-proxy-agent": "^7.0.5",
+    "undici": "^6.21.0",
+    "ws": "^8.18.0"
+  }
+}
